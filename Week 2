@@ -1,0 +1,11 @@
+minmax <- function(column){   ((column-min(column))/(max(column)-min(column)))          }
+
+bike_sharing_df <- bike_sharing_df %>% mutate(RENTED_BIKE_COUNT=minmax(RENTED_BIKE_COUNT),
+                          TEMPERATURE=minmax(TEMPERATURE),
+                          HUMIDITY=minmax(HUMIDITY),
+                          WIND_SPEED=minmax(HUMIDITY),
+                          VISIBILITY=minmax(VISIBILITY),
+                          DEW_POINT_TEMPERATURE=minmax(DEW_POINT_TEMPERATURE),
+                          SOLAR_RADIATION=minmax(SOLAR_RADIATION),
+                          RAINFALL=minmax(RAINFALL),
+                          SNOWFALL=minmax(SNOWFALL)) 
